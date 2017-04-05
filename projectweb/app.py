@@ -1,4 +1,5 @@
 from flask import *
+from flask_login import *
 
 app = Flask(__name__)
 
@@ -22,5 +23,21 @@ def sign_up():
 @app.route('/boy_page')
 def boy_page():
     return render_template('boy_page.html')
+@app.route('/update', methods=["GET", "POST"])
+def update():
+    if (request.method == "GET"):
+        return render_template("update_info.html")
+    if (request.method == "POST"):
+        pass
+        return render_template("update_info.html")
+
+
+
+
+
+
 if __name__ == '__main__':
     app.run()
+
+
+
