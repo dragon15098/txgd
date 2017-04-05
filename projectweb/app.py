@@ -11,13 +11,13 @@ def hello_world():
 def homepage():
     return render_template('homepage.html')
 
-@app.route('/login')
-def sign_in():
+@app.route('/login', methods=["GET", "POST"])
+def login():
     return render_template('login.html')
 
 @app.route('/sign_up')
 def sign_up():
-    return  render_template('sign_up.py')
+    return  render_template('sign_up.html')
 
 @app.route('/boy_page')
 def boy_page():
