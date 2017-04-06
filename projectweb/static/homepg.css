@@ -4,55 +4,56 @@
              -moz-box-sizing: border-box;
             }
             body {
-             font-family: Helvetica,Arial,sans-serif;
-             font-size: 18px;
-             line-height: 1em;
-             width: 1170px;
-             height: 1500px;
+                font-family: Helvetica, Arial, sans-serif;
+                font-size: 18px;
+                line-height: 1em;
                 margin: 0px;
             }
         #menu ul{
-            background: hotpink;
+            background: black;
             list-style-type: none;
             text-align: center;
-            width: 400px;
-            height: 400px;
+            width: 800px;
+            height: 50px;
         }
-        /*#menu li {*/
-            /*color: #f1f1f1;*/
-            /*display: inline-block;*/
-            /*width: 240px;*/
-            /*height: 50px;*/
-            /*line-height: 50px;*/
-        /*}*/
+        #menu li {
+            display: inline-block;
+            width: 200px;
+            height: 50px;
+            line-height: 50px;
+        }
         #menu a {
             text-decoration: none;
-            color: #fff;
+            color: #ffffff;
             display: block;
+            width: 200px;
+            height: 50px;
         }
+
         #menu a:hover {
             background: #5cf442;
-            color: #333;
+            color: #ff0000;
         }
         #login ul{
             background: cornflowerblue;
             list-style-type: none;
             text-align: center;
         }
-        /*#login li {*/
-            /*color: #f1f1f1;*/
-            /*display: inline-block;*/
-            /*width: 120px;*/
-            /*height: 50px;*/
-            /*line-height: 50px;*/
-        /*}*/
+        #login li {
+            color: #f1f1f1;
+            display: inline-block;
+            width: 120px;
+            height: 50px;
+            line-height: 50px;
+        }
         #login a {
             text-decoration: none;
             color: #fff;
             display: block;
         }
         #hm{
-            width: 50px;
+            width: 200px;
+            color: #5cf442;
         }
         #login a:hover {
             background: #F1F1F1;
