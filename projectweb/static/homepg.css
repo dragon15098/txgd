@@ -25,7 +25,7 @@
         #menu a {
             text-decoration: none;
             color: teal;
-            display: block;
+            display: inline-block;
             width: 200px;
             height: 50px;
         }

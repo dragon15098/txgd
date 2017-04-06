@@ -12,7 +12,7 @@ def hello_world():
 def homepage():
     return render_template('homepage.html')
 
-@app.route('/login', methods=["GET", "POST"])
+@app.route('/login')
 def login():
     return render_template('login.html')
 
