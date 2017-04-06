@@ -1,0 +1,56 @@
+body{
+    font-family: Arial;
+    color: grey;
+}
+#menu ul{
+    background: hotpink;
+    list-style-type: none;
+    text-align: center;
+}
+#menu li{
+    color: #f1f1f1;
+    display: inline-block;
+    width: 290px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: -5px;
+}
+#menu a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+#menu a:hover {
+  background: #F1F1F1;
+  color: #333;
+}
+#login ul{
+    background: cornflowerblue;
+    list-style-type: none;
+    text-align: center;
+}
+#login li{
+    color: #f1f1f1;
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: -5px;
+}
+#login a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+#login a:hover {
+    background: #F1F1F1;
+    color: #333;
+}
+#left{
+    width: 1070px;
+    float: left;
+}
+#right{
+    margin-right: -170px;
+    float: right;
+}
