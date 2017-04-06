@@ -38,6 +38,9 @@
             background: cornflowerblue;
             list-style-type: none;
             text-align: center;
+            width: 200px;
+            height: 200px;
+
         }
         #login li {
             color: #f1f1f1;
