@@ -1,0 +1,10 @@
+.w3-container{
+    background-color: lightblue;
+    width: 600px;
+    border: 5px solid hotpink;
+    padding: 40px;
+    margin: 290px 650px;
+}
+body{
+    background-color: blanchedalmond;
+}
