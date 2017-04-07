@@ -11,7 +11,7 @@
             }
         #menu ul{
             background: black;
-            list-style-type: none;
+            display: inline-block;
             text-align: center;
             width: 800px;
             height: 50px;
@@ -24,15 +24,15 @@
         }
         #menu a {
             text-decoration: none;
-            color: #ffffff;
-            display: block;
+            color: teal;
+            display: inline-block;
             width: 200px;
             height: 50px;
         }
 
         #menu a:hover {
-            background: #5cf442;
-            color: #ff0000;
+            background: pink;
+            color: black;
         }
         #login ul{
             background: cornflowerblue;
@@ -43,7 +43,6 @@
 
         }
         #login li {
-            color: #f1f1f1;
             display: inline-block;
             width: 120px;
             height: 50px;
