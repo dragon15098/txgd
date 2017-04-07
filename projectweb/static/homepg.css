@@ -1,23 +1,27 @@
-#menu a {
+#main a {
     color: white;
     display: inline-block;
-    width: 200px;
-    height: 50px;
-    display: inline-block;
-}
-.left {
-    display: inline-block;
-    width: 600px;
+    width: 325px;
     height: 53px;
-    background-color: black;
-    color: white;
+    margin: auto;
+    padding-right: 30px;
 }
+
 .a_style{
-    background-color: black;
-    color: red;
-}
-.right{
-    display: inline-block;
-    width: 600px;
+    background-color: #1b68a9;
     height: 53px;
+    text-align: center;
 }
+a:hover{
+    background-color: #f1f1f1;
+    color: red;
+    height: 50px;
+    width: 200px;
+    font-size: medium;
+}
+
+#l a{
+    ;
+}
+
+
