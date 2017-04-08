@@ -28,3 +28,6 @@ a:hover{
     width: 200px;
     font-size: medium;
 }
+.image{
+    display: inline-block;
+}
