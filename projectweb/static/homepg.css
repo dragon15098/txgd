@@ -1,5 +1,10 @@
+body{
+    background-color: #e5efff;
+    background-repeat: repeat-x;
+    color: #f1f1f1;
+}
 a {
-    color: white;
+
     display: inline-block;
     width: 200px;
     height: 53px;
