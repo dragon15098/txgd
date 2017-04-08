@@ -1,73 +1,30 @@
-* {
-            box-sizing: border-box;
-             -webkit-box-sizing: border-box;
-             -moz-box-sizing: border-box;
-            }
-            body {
-                font-family: Helvetica, Arial, sans-serif;
-                font-size: 18px;
-                line-height: 1em;
-                margin: 0px;
-            }
-        #menu ul{
-            background: black;
-            display: inline-block;
-            text-align: center;
-            width: 800px;
-            height: 50px;
-        }
-        #menu li {
-            display: inline-block;
-            width: 200px;
-            height: 50px;
-            line-height: 50px;
-        }
-        #menu a {
-            text-decoration: none;
-            color: teal;
-            display: inline-block;
-            width: 200px;
-            height: 50px;
-        }
+body{
+    background-color: #e5efff;
+    background-repeat: repeat-x;
+    color: #f1f1f1;
+}
+a {
 
-        #menu a:hover {
-            background: pink;
-            color: black;
-        }
-        #login ul{
-            background: cornflowerblue;
-            list-style-type: none;
-            text-align: center;
-            width: 200px;
-            height: 200px;
+    display: inline-block;
+    width: 200px;
+    height: 53px;
+    margin: auto;
 
-        }
-        #login li {
-            display: inline-block;
-            width: 120px;
-            height: 50px;
-            line-height: 50px;
-        }
-        #login a {
-            text-decoration: none;
-            color: #fff;
-            display: block;
-        }
-        #hm{
-            width: 200px;
-            color: #5cf442;
-        }
-        #login a:hover {
-            background: #F1F1F1;
-            color: #333;
-        }
-        .right{
-         float: right;
-         width: 308px;
-         margin-right: 27px;
-        }
-        .left {
-         float: left;
-         width: 808px;
-         margin-left: 30px;
-        }
+}
+
+.a_style{
+    background-color: #1b68a9;
+    height: 53px;
+    text-align: center;
+    display: inline-block;
+    padding-left: 50px;
+    margin: 0px 300px;
+    padding-right: 50px;
+}
+a:hover{
+    background-color: #f1f1f1;
+    color: red;
+    height: 53px;
+    width: 200px;
+    font-size: medium;
+}
