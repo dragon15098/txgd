@@ -13,6 +13,7 @@ a {
     text-align: center;
     display: inline-block;
     padding-left: 100px;
+    margin: 0px 300px;
 }
 a:hover{
     background-color: #f1f1f1;
