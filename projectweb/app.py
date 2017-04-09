@@ -4,13 +4,17 @@ from sessionuser import SessionUser
 from werkzeug.utils import *
 from models.user import User
 import mlab
+import os
 
 app = Flask(__name__)
 mlab.connect()
 
+login_manager = LoginManager()
+login_manager.init_app(app)
+
 admin_user = User()
-admin_user.useraname = 'admin'
-admin_user.password = 'admin'
+admin_user.username = 'abc'
+admin_user.password = 'abc'
 admin_user.save()
 
 @app.route('/')
