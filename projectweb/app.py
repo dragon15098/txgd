@@ -7,14 +7,14 @@ import mlab
 import os
 
 app = Flask(__name__)
-mlab.connect()
 
 login_manager = LoginManager()
 login_manager.init_app(app)
+mlab.connect()
 
 admin_user = User()
-admin_user.username = 'abc'
-admin_user.password = 'abc'
+admin_user.username = "admin"
+admin_user.password = "admin"
 admin_user.save()
 
 @app.route('/')
@@ -55,10 +55,6 @@ def update():
     if (request.method == "POST"):
         pass
         return render_template("update_info.html")
-
-
-
-
 
 
 if __name__ == '__main__':

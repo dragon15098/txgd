@@ -1,10 +1,10 @@
 import mongoengine
-# mongodb://<dbuser>:<dbpassword>@ds151450.mlab.com:51450/txgd
-host = "ds151450.mlab.com"
-port = 51450
+# mongodb://<dbuser>:<dbpassword>@ds157040.mlab.com:57040/txgd
+host = "ds157040.mlab.com"
+port = 57040
 db_name = "txgd"
-username = "txgd"
-password = "txgd"
+username = "admin"
+password = "admin"
 def connect():
     mongoengine.connect(db_name, host=host, port=port, username=username, password=password)
 
