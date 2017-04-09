@@ -8,14 +8,13 @@ import os
 
 app = Flask(__name__)
 
+mlab.connect()
 login_manager = LoginManager()
 login_manager.init_app(app)
-mlab.connect()
+app.secret_key = "abc"
 
-admin_user = User()
-admin_user.username = "admin"
-admin_user.password = "admin"
-admin_user.save()
+login_manager = LoginManager()
+login_manager.init_app(app)
 
 @app.route('/')
 def hello_world():
@@ -35,10 +34,11 @@ def login_web():
             session_user = SessionUser(user.id)
             user.update(set__token=str(user.id))
             login_user(session_user)
-            return render_template("login.html")
+            return render_template("homepage.html")
         else:
             pass
             return redirect(url_for("homepage"))
+
 
 
 @app.route('/sign_up')
