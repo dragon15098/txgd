@@ -1,20 +1,21 @@
 from flask import *
+import mlab
 from flask_login import *
 from sessionuser import SessionUser
 from werkzeug.utils import *
 from models.user import User
-import mlab
 import os
 
 app = Flask(__name__)
-
 mlab.connect()
-login_manager = LoginManager()
-login_manager.init_app(app)
-app.secret_key = "abc"
 
 login_manager = LoginManager()
 login_manager.init_app(app)
+
+admin_user = User()
+admin_user.username = 'abc'
+admin_user.password = 'abc'
+admin_user.save()
 
 @app.route('/')
 def hello_world():
@@ -34,11 +35,10 @@ def login_web():
             session_user = SessionUser(user.id)
             user.update(set__token=str(user.id))
             login_user(session_user)
-            return render_template("homepage.html")
+            return render_template("login.html")
         else:
             pass
             return redirect(url_for("homepage"))
-
 
 
 @app.route('/sign_up')
