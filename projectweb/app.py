@@ -35,10 +35,10 @@ def login_web():
             session_user = SessionUser(user.id)
             user.update(set__token=str(user.id))
             login_user(session_user)
-            return render_template("login.html")
+            return render_template("homepage.html")
         else:
             pass
-            return redirect(url_for("homepage"))
+            return redirect(url_for("login_web"))
 
 
 @app.route('/sign_up')

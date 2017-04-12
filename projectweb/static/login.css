@@ -68,3 +68,13 @@ body{
     margin: 0px 50px 50px;
     background: #e5efff;
 }
+.area{
+    height: 50px;
+    width: 100px;
+    background: #45caf7;
+    color: black;
+}
+.area:hover{
+    background-color: #4589f7;
+    color: #e5efff;
+}
