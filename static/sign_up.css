@@ -56,3 +56,17 @@ body{
 form{
     background: white;
 }
+.area{
+    height: 70px;
+    width: 200px;
+    background-color: #b0e8fc;
+    color: black;
+}
+.area:hover{
+    background-color: #398ead;
+    color: #f1f1f1;
+}
+.imgcontainer {
+        text-align: center;
+        margin: 24px 0 12px 0;
+    }
