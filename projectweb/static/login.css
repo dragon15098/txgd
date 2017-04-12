@@ -69,12 +69,14 @@ body{
     background: #e5efff;
 }
 .area{
-    height: 50px;
+    height: 40px;
     width: 100px;
     background: #45caf7;
     color: black;
+    text-align: center;
 }
 .area:hover{
     background-color: #4589f7;
     color: #e5efff;
+    text-align: center;
 }

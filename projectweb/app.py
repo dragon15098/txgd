@@ -8,14 +8,15 @@ import os
 
 app = Flask(__name__)
 mlab.connect()
+app.secret_key = "abc"
 
 login_manager = LoginManager()
 login_manager.init_app(app)
 
-admin_user = User()
-admin_user.username = 'abc'
-admin_user.password = 'abc'
-admin_user.save()
+# admin_user = User()
+# admin_user.username = 'abc'
+# admin_user.password = 'abc'
+# admin_user.save()
 
 @app.route('/')
 def hello_world():
