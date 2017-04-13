@@ -4,3 +4,5 @@ class User(Document):
     username = StringField()
     password = StringField()
     token = StringField()
+
+    description = StringField()

@@ -13,11 +13,6 @@ app.secret_key = "abc"
 login_manager = LoginManager()
 login_manager.init_app(app)
 
-# admin_user = User()
-# admin_user.username = 'abc'
-# admin_user.password = 'abc'
-# admin_user.save()
-
 @app.route('/')
 def hello_world():
     return redirect(url_for('homepage'))
@@ -48,10 +43,11 @@ def sign_up_web():
         return render_template("sign_up.html")
     elif request.method == "POST":
         user = User.objects(username=request.form["username"]).first()
-        if not user and request.form["username"] == request.form["psw-repeat"]:
+        if not user and request.form["password"] == request.form["psw-repeat"]:
             new_user = User()
             new_user.username = request.form["username"]
             new_user.password = request.form["password"]
+            new_user.description = "None"
             new_user.save()
             return render_template("homepage.html")
         else:
