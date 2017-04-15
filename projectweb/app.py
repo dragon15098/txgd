@@ -66,7 +66,6 @@ def sign_up_web():
             else:
                 return render_template("sign_up.html")
 
-
 @app.route('/boy_page')
 def boy_page():
     return render_template('boy_page.html')

@@ -5,22 +5,31 @@
     <title>Login</title>
     <link rel="shortcut icon" href="http://i.imgur.com/CKJcV9q.jpg">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type= "text/css" href="../static/w3css.css">
     <link rel="stylesheet" href="../static/login.css">
 </head>
 <body>
-<form class="w3-container w3-third " method="post" enctype="multipart/form-data" style="margin: 100px 0px 0px 550px">
-    <div class="imgcontainer">
-        <img src="http://alobooking.vn/public/frontend/img/avatar.jpeg" alt="Avatar" class="avatar" >
-    </div>
+<div class="w3-container w3-margin-auto" style="width: 50%;height: 50%;margin: auto">
+    <form action="/action_page.php">
+        <div class="imgcontainer">
+            <img src="http://alobooking.vn/public/frontend/img/avatar.jpeg" alt="Avatar" class="avatar">
+        </div>
 
-    <label>Username</label>
-    <input class="w3-input" type="text" name="username">
+        <div class="container">
+            <label><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
 
-    <label>Password</label>
-    <input class="w3-input" type="password" name="password">
+            <label><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
 
-    <input type="submit" class="w3-btn w3-round-large area" style="margin: 50px 0px 50px 100px" value="Login">
-    <a  href="/sign_up" class="w3-btn w3-round-large area" style="margin: 50px 0px 50px 130px; text-align: center">Sign_up</a>
-</form>
+            <button type="submit">Login</button>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn">Cancel</button>
+        </div>
+    </form>
+</div>
+
 </body>
 </html>

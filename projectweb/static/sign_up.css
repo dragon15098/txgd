@@ -1,4 +1,4 @@
-
+/* Full-width input fields */
 input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
@@ -10,7 +10,7 @@ input[type=text], input[type=password] {
 
 /* Set a style for all buttons */
 button {
-    background-color: #4CAF50;
+    background-color: #00bcd4;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -49,24 +49,3 @@ button {
        width: 100%;
     }
 }
-body{
-    margin: 0px 50px 50px;
-    background: #e5efff;
-}
-form{
-    background: white;
-}
-.area{
-    height: 70px;
-    width: 200px;
-    background-color: #b0e8fc;
-    color: black;
-}
-.area:hover{
-    background-color: #398ead;
-    color: #f1f1f1;
-}
-.imgcontainer {
-        text-align: center;
-        margin: 24px 0 12px 0;
-    }

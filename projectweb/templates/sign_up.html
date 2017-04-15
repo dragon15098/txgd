@@ -8,31 +8,36 @@
     <link rel="stylesheet" href="../static/login.css">
 </head>
 <body>
-<form class="w3-container w3-third " method="post" enctype="multipart/form-data" style="margin: 100px 0px 0px 550px">
-    <div class="imgcontainer">
-        <img src="http://alobooking.vn/public/frontend/img/avatar.jpeg" alt="Avatar" class="avatar" >
-    </div>
-    <label><b>Username</b></label>
-    <input type="text" placeholder="Enter Name" name="username" required>
+<div class="w3-container w3-margin-auto" style="width: 50%;height: 50%;margin: auto">
+    <form action="/action_page.php" style="border:1px solid #ccc">
+        <div class="imgcontainer">
+            <img src="http://alobooking.vn/public/frontend/img/avatar.jpeg" alt="Avatar" class="avatar">
+        </div>
+        <div class="container">
+            <label><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
 
-    <label><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="password" required>
+            <label><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
 
-    <label><b>Repeat Password</b></label>
-    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+            <label><b>Repeat Password</b></label>
+            <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
 
-    <label><b>Description</b></label>
-    <input type="text" placeholder="Description" name="description" required>
+            <label><b>Images</b></label>
+            <input type="file" accept="image/*" name="images">
 
-    <div>
-        <input type="radio" name="gender" value="male" checked> Male<br>
-    </div>
-    <div>
-        <input type="radio" name="gender" value="female"> Female<br>
-    </div>
-
-    <input type="submit" class="w3-btn w3-round-large area" style="margin: 10px 99px 10px" value="Sign up">
-    <a  href="/login" class="w3-btn w3-round-large area" style="text-align: center;margin: 10px 67px 10px">Login</a>
-</form>
+            <div>
+                <input type="radio" name="gender" value="male" checked> Male<br>
+            </div>
+            <div>
+                <input type="radio" name="gender" value="female"> Female<br>
+            </div>
+            <div class="clearfix">
+                <button type="submit" class="signupbtn">Sign Up</button>
+                <button type="button" class="cancelbtn">Cancel</button>
+            </div>
+        </div>
+    </form>
+</div>
 </body>
 </html>
