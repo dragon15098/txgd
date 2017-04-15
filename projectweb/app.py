@@ -3,7 +3,8 @@ import mlab
 from flask_login import *
 from sessionuser import SessionUser
 from werkzeug.utils import *
-from models.user import User
+from models.user_female import UserFemale
+from models.user_male import UserMale
 import os
 
 app = Flask(__name__)
@@ -42,16 +43,28 @@ def sign_up_web():
     if request.method == "GET":
         return render_template("sign_up.html")
     elif request.method == "POST":
-        user = User.objects(username=request.form["username"]).first()
-        if not user and request.form["password"] == request.form["psw-repeat"]:
-            new_user = User()
-            new_user.username = request.form["username"]
-            new_user.password = request.form["password"]
-            new_user.description = "None"
-            new_user.save()
-            return render_template("homepage.html")
-        else:
-            return render_template("sign_up.html")
+        if request.form["male"]:
+            user = UserMale.objects(username=request.form["username"]).first()
+            if not user and request.form["password"] == request.form["psw-repeat"]:
+                new_user = UserMale()
+                new_user.username = request.form["username"]
+                new_user.password = request.form["password"]
+                new_user.description = "None"
+                new_user.save()00
+                return render_template("homepage.html")
+            else:
+                return render_template("sign_up.html")
+        elif request.form["female"]:
+            user = UserFemale.objects(username=request.form["username"]).first()
+            if not user and request.form["password"] == request.form["psw-repeat"]:
+                new_user = UserFemale()
+                new_user.username = request.form["username"]
+                new_user.password = request.form["password"]
+                new_user.description = "None"
+                new_user.save()
+                return render_template("homepage.html")
+            else:
+                return render_template("sign_up.html")
 
 
 @app.route('/boy_page')

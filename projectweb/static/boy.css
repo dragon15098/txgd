@@ -4,7 +4,6 @@ body{
     color: #f1f1f1;
 }
 a {
-
     display: inline-block;
     width: 200px;
     height: 53px;
@@ -21,17 +20,6 @@ a {
     margin: 0px 300px;
     padding-right: 50px;
 }
-a:hover{
-    background-color: #f1f1f1;
-    color: red;
-    height: 53px;
-    width: 200px;
-    font-size: medium;
-}
 .image{
     display: inline-block;
-}
-#wrapper{
-    text-align: left;
-    margin: auto;
 }

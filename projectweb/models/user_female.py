@@ -1,8 +1,8 @@
 from mongoengine import *
 
-class User(Document):
+class UserFemale(Document):
     username = StringField()
     password = StringField()
     token = StringField()
-    image = StringField()
+
     description = StringField()
