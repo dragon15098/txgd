@@ -31,3 +31,7 @@ a:hover{
 .image{
     display: inline-block;
 }
+#wrapper{
+    text-align: left;
+    margin: auto;
+}
