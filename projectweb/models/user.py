@@ -1,10 +1,10 @@
 from mongoengine import *
 
-class UserMale(Document):
+class User(Document):
     username = StringField()
     password = StringField()
     token = StringField()
+    gender = StringField()
     description = StringField()
-
-
-
+    number = IntField()
+    image = StringField()
