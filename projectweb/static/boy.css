@@ -1,0 +1,25 @@
+body{
+    background-color: #e5efff;
+    background-repeat: repeat-x;
+    color: #f1f1f1;
+}
+a {
+    display: inline-block;
+    width: 200px;
+    height: 53px;
+    margin: auto;
+
+}
+
+.a_style{
+    background-color: #1b68a9;
+    height: 53px;
+    text-align: center;
+    display: inline-block;
+    padding-left: 50px;
+    margin: 0px 300px;
+    padding-right: 50px;
+}
+.image{
+    display: inline-block;
+}
