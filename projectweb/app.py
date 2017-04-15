@@ -50,7 +50,7 @@ def sign_up_web():
                 new_user.username = request.form["username"]
                 new_user.password = request.form["password"]
                 new_user.description = "None"
-                new_user.save()00
+                new_user.save()
                 return render_template("homepage.html")
             else:
                 return render_template("sign_up.html")
