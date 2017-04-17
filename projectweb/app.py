@@ -98,13 +98,19 @@ def sign_up_web():
         else:
             return render_template("sign_up.html")
 
-
-@app.route('/boy_page')
+@app.route('/boy_page', methods=["GET", "POST"])
+@login_required
 def boy_page():
     num = Number.objects(name="abc").first()
     temp = random.randint(0, num.numberboy)
     boy = User.objects(number=temp, gender="male").first()
-    return render_template('boy_page.html', description=boy.description, user=boy.image)
+    if(request.method == "GET"):
+        return render_template('boy_page.html', description=boy.description, user=boy.image)
+    elif (request.method == "POST"):
+        num = Number.objects(name="abc").first()
+        temp = random.randint(0, num.numberboy)
+        boy = User.objects(number=temp, gender="male").first()
+        return render_template('boy_page.html', description=boy.description, user=boy.image)
 
 
 @app.route('/girl_page')
@@ -113,7 +119,6 @@ def girl_page():
     temp = random.randint(0, num.numbergirl)
     girl = User.objects(number=temp, gender="male").first()
     return render_template('girl_page.html', description=girl.description)
-
 
 @app.route('/update', methods=["GET", "POST"])
 @login_required
@@ -148,7 +153,6 @@ def update():
 @app.route('/uploads/<filename>')
 def uploaded_file(filename):
     return send_from_directory(app.config["UPLOAD_PATH"], filename)
-
 
 @app.route("/logout")
 def logout():

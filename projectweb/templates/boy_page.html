@@ -1,18 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:http="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Boy</title>
-    <link rel="stylesheet" type= "text/css" href="../static/w3css.css">
+    <title>Sign up</title>
+    <link rel="shortcut icon" href="http://i.imgur.com/CKJcV9q.jpg">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="../static/login.css">
 </head>
 <body>
-<div>
-    <form action="/action_page.php">
+<div class="w3-container w3-margin-auto" style="width: 50%;height: 50%;margin: auto">
+    <form style="border:1px solid #ccc" method="post" enctype="multipart/form-data">
         <div class="imgcontainer">
-            <img src="http://thuvienanhdep.net/wp-content/uploads/2015/11/nhung-hinh-anh-hot-girl-dang-yeu-de-thuong-nhat-tren-mang-xa-hoi-hien-nay-3.jpg" alt="Avatar" class="avatar">
+            <img src="{{ image }}" alt="Avatar" class="avatar">
+        </div>
+        <div class="container">
+            <label><b>New Description</b></label>
+            <input type="text" placeholder="{{ description }}" name="description" required>
+
+            <label><b>Images</b></label>
+            <input type="file" accept="image/*" name="source">
+
+            <div class="clearfix" style="margin: 5px">
+                <input type="submit" class="w3-btn w3-aqua" value="Submit">
+            </div>
         </div>
     </form>
-
 </div>
 </body>
 </html>
