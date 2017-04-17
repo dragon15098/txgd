@@ -9,22 +9,26 @@
 </head>
 <body>
 <div class="w3-container w3-margin-auto" style="width: 50%;height: 50%;margin: auto">
-    <form action="/action_page.php" style="border:1px solid #ccc">
+    <form style="border:1px solid #ccc" method="post" enctype="multipart/form-data">
         <div class="imgcontainer">
             <img src="http://alobooking.vn/public/frontend/img/avatar.jpeg" alt="Avatar" class="avatar">
         </div>
         <div class="container">
-            <label><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email" required>
+            <label><b>Username</b></label>
+            <input type="text" placeholder="Username" name="username" required>
 
             <label><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
+            <input type="password" placeholder="Enter Password" name="password" required>
 
             <label><b>Repeat Password</b></label>
-            <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+            <input type="password" placeholder="Repeat Password" name="password-repeat" required>
+
+            <label><b>Description</b></label>
+            <input type="text" placeholder="Description" name="description" required>
+
 
             <label><b>Images</b></label>
-            <input type="file" accept="image/*" name="images">
+            <input type="file" accept="image/*" name="source">
 
             <div>
                 <input type="radio" name="gender" value="male" checked> Male<br>
@@ -33,8 +37,7 @@
                 <input type="radio" name="gender" value="female"> Female<br>
             </div>
             <div class="clearfix">
-                <button type="submit" class="signupbtn">Sign Up</button>
-                <button type="button" class="cancelbtn">Cancel</button>
+                <input type="submit" class="w3-btn w3-aqua" value="Submit">
             </div>
         </div>
     </form>
