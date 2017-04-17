@@ -122,7 +122,10 @@ def update():
     if (request.method == "GET"):
         return render_template("update_info.html", image=user.image, description=user.description)
     if (request.method == "POST"):
-        #image
+        # description
+        user.description = request.form["description"]
+
+        # image
         file = request.files["source"]
         if file:
             filename = secure_filename(file.filename)
@@ -139,7 +142,8 @@ def update():
             file.save(os.path.join(app.config["UPLOAD_PATH"], filename))
             user.image = url_for('uploaded_file', filename=filename)
 
-        return render_template("update_info.html")
+        user.save()
+        return render_template("homepage.html")
 
 @app.route('/uploads/<filename>')
 def uploaded_file(filename):
