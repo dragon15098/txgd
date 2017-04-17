@@ -21,13 +21,13 @@ login_manager.init_app(app)
 
 
 @app.route('/')
-def hello_world():
-    return redirect(url_for('homepage'))
-
-
-@app.route('/homepage')
 def homepage():
     return render_template('homepage.html')
+
+
+@app.route('/homepage_lg')
+def homepage_lg():
+    return render_template('homepage_login.html')
 
 
 @login_manager.user_loader
@@ -36,6 +36,7 @@ def user_loader(user_token):
     if found_user:
         session_user = SessionUser(found_user.token)
         return session_user
+
 
 @app.route('/login', methods=["GET", "POST"])
 def login_web():
@@ -47,7 +48,7 @@ def login_web():
             session_user = SessionUser(user.id)
             user.update(set__token=str(user.id))
             login_user(session_user)
-            return render_template("homepage.html")
+            return render_template("homepage_login.html")
         else:
             pass
             return redirect(url_for("login_web"))
@@ -89,7 +90,7 @@ def sign_up_web():
                 num.numberboy +=1
             else:
                 new_user.gender = "female"
-                new_user.number = num.numbergirl +1
+                new_user.number = num.numbergirl + 1
                 num.numbergirl +=1
 
             num.save()
@@ -97,6 +98,7 @@ def sign_up_web():
             return render_template("homepage.html")
         else:
             return render_template("sign_up.html")
+
 
 @app.route('/boy_page', methods=["GET", "POST"])
 @login_required
@@ -119,6 +121,7 @@ def girl_page():
     temp = random.randint(0, num.numbergirl)
     girl = User.objects(number=temp, gender="male").first()
     return render_template('girl_page.html', description=girl.description)
+
 
 @app.route('/update', methods=["GET", "POST"])
 @login_required
@@ -146,9 +149,8 @@ def update():
                     # change filename add(name_index)
             file.save(os.path.join(app.config["UPLOAD_PATH"], filename))
             user.image = url_for('uploaded_file', filename=filename)
-
         user.save()
-        return render_template("homepage.html")
+        return render_template("homepage_login.html")
 
 @app.route('/uploads/<filename>')
 def uploaded_file(filename):
@@ -158,7 +160,6 @@ def uploaded_file(filename):
 def logout():
     logout_user()
     return redirect(url_for('homepage'))
-
 
 if __name__ == '__main__':
     app.run()
