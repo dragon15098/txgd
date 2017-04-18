@@ -103,18 +103,21 @@ def sign_up_web():
 @app.route('/boy_page')
 @login_required
 def boy_page():
-    num = Number.objects(name="abc").first()
-    temp = random.randint(0, num.numberboy)
-    boy = User.objects(number=temp, gender="male").first()
-    print(boy.description)
-    return render_template('boy_page.html', description=boy.description, image=boy.image)
+    while True:
+        num = Number.objects(name="abc").first()
+        temp = random.randint(0, num.numberboy)
+        boy = User.objects(number=temp, gender="male").first()
+        print(boy.description)
+        if boy.image and boy.description:
+            return render_template('boy_page.html', description=boy.description, image=boy.image)
 
 @app.route('/girl_page')
 def girl_page():
     num = Number.objects(name="abc").first()
-    temp = random.randint(0, num.numbergirl)
+    temp = random.randint(0, num.numberboy)
     girl = User.objects(number=temp, gender="female").first()
-    return render_template('girl_page.html', description=girl.description, image=girl.image)
+    if girl.image and girl.description:
+        return render_template('boy_page.html', description=girl.description, image=girl.image)
 
 
 @app.route('/update', methods=["GET", "POST"])
